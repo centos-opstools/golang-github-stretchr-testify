@@ -16,7 +16,7 @@
 %global goipath         github.com/stretchr/testify
 Version:                1.9.0
 
-%gometa -L
+%gometa
 
 %global common_description %{expand:
 Golang set of packages that provide many tools for testifying
@@ -44,11 +44,8 @@ Source:         %{gosource}
 %gopkg
 
 %prep
-%goprep -A
+%goprep
 %autopatch -p1
-
-%generate_buildrequires
-%go_generate_buildrequires
 
 
 %install
